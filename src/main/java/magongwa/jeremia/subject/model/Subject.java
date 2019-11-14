@@ -1,6 +1,6 @@
 package magongwa.jeremia.subject.model;
 
-import org.bson.types.ObjectId;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -8,14 +8,14 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Subject {
 
 	@Id
-	private ObjectId subject_id;
+	private String subjectId;
 	private String title;
 	
-	public ObjectId getSubject_id() {
-		return subject_id;
+	public String getSubject_id() {
+		return subjectId;
 	}
-	public void setSubject_id(ObjectId subject_id) {
-		this.subject_id = subject_id;
+	public void setSubject_id(String subjectId) {
+		this.subjectId = subjectId;
 	}
 	public String getTitle() {
 		return title;
@@ -25,7 +25,7 @@ public class Subject {
 	}
 	@Override
 	public String toString() {
-		return "Subject [subject_id=" + subject_id + ", title=" + title + "]";
+		return "Subject [subject_id=" + subjectId + ", title=" + title + "]";
 	}
 	public Subject(String title) {
 		super();
